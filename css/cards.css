@@ -1,0 +1,184 @@
+.diferenciais .container{
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    width: 300px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--cor-principal);
+
+    box-shadow: 0 10px 30px rgba(212,175,55,0.1);
+}
+
+.card h4 {
+    color: var(--cor-principal);
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+.card p {
+    color: var(--cor-texto-secundario);
+
+    line-height: 1.7;
+}
+
+.depoimentos-cards {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+}
+
+.depoimento-card {
+    background: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    flex: 1;
+
+    min-width: 250px;
+
+    transition: 0.3s;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--cor-principal);
+}
+
+.depoimento-card span {
+    color: var(--cor-principal);
+
+    font-size: 22px;
+}
+
+.depoimento-card h4 {
+    color: var(--cor-texto);
+}
+
+.sobre .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 20px;
+}
+
+.sobre-texto {
+    max-width: 600px;
+}
+
+.sobre-texto h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    color: var(--cor-texto-secundario);
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+.servicos-cards {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+}
+
+.servico-card {
+    background: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    flex: 1;
+
+    min-width: 250px;
+
+    transition: 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--cor-principal);
+}
+
+.servico-card h4 {
+    color: var(--cor-principal);
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+
+.servico-card p {
+    color: var(--cor-texto-secundario);
+
+    line-height: 1.7;
+}
+
+.card,
+.servico-card {
+    overflow: hidden;
+}

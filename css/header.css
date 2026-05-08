@@ -1,0 +1,61 @@
+header .container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+header {
+    padding: 25px 0;
+
+    position: fixed;
+
+    top: 0;
+
+    background: rgba(17,17,17,0.9);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--cor-borda);
+
+    z-index: 1000;
+
+    width: 100%;
+}
+
+header.ativo {
+    background: rgba(17,17,17,0.95);
+
+    backdrop-filter: blur(10px);
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    font-size: 32px;
+
+    color: var(--cor-principal);
+
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-principal);
+}
