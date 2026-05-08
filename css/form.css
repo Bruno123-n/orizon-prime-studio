@@ -71,3 +71,13 @@
 
     box-shadow: 0 0 0 4px rgba(212,175,55,0.1);
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--cor-texto);
+
+    -webkit-box-shadow: 0 0 0px 1000px var(--cor-fundo) inset;
+
+    transition: background-color 5000s ease-in-out 0s;
+}
