@@ -6,6 +6,8 @@ export function formulario() {
 
         event.preventDefault()
 
+        const botao = form.querySelector('button')
+
         const nome = document.querySelector('#nome').value
 
         const telefone = document.querySelector('#telefone').value
@@ -41,7 +43,15 @@ export function formulario() {
 
         const url = `https://wa.me/5547997688933?text=${encodeURIComponent(mensagem)}`
 
+        botao.textContent = 'Enviando...'
+
+        botao.disabled = true
+
         window.open(url, '_blank')
+
+        botao.textContent = 'Agendar Agora'
+        
+        botao.disabled = false
 
 
         console.log(nome)
