@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +12,23 @@
             <h1 class="logo">
                 Orizon Prime Studio
             </h1>
+
+            <button class="menu-mobile">
+                ☰
+            </button>
+
             <nav>
-                <a href="#">Início</a>
-                <a href="#">Serviços</a>
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+                <a href="#hero">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
     <main>
 
-        <section class="hero">
+        <section id="hero" class="hero">
              <div class="container">
                  <div class="hero-texto">
                     <h2>
@@ -52,7 +57,7 @@
                     A Experiência Prime em Cada Detalhe
                 </h2>
                 <div class="cards">
-                    <div class="card">
+                    <div class="card aparecer">
                         <h4>
                             Curadoria de Estilo :
                         </h4>
@@ -60,7 +65,7 @@
                             Não apenas cortamos, sugerimos o que melhor se adapta ao seu rosto.
                         </p>
                     </div>
-                    <div class="card">
+                    <div class="card aparecer">
                         <h4>
                             Ambiente Premium :
                         </h4>
@@ -68,7 +73,7 @@
                             Climatizado, café gourmet e som ambiente selecionado.
                         </p>
                     </div>
-                    <div class="card">
+                    <div class="card aparecer">
                         <h4>
                             Toalha Quente & Navalha :
                         </h4>
@@ -81,7 +86,66 @@
         </section>
 
 
-        <section class="sobre">
+        <section class="depoimentos">
+
+            <div class="container">
+
+                <h2>
+                    O Que Nossos Clientes Dizem
+                </h2>
+
+                <div class="depoimentos-cards">
+
+                    <div class="depoimento-card aparecer">
+
+                        <span>★★★★★</span>
+
+                        <p>
+                            “A melhor experiência em barbearia que já tive. Atendimento impecável.”
+                        </p>
+
+                        <h4>
+                            — Carlos Mendes
+                        </h4>
+
+                    </div>
+
+                    <div class="depoimento-card aparecer">
+
+                        <span>★★★★★</span>
+
+                        <p>
+                            “Ambiente sofisticado e profissionais extremamente qualificados.”
+                        </p>
+
+                        <h4>
+                            — Rafael Lima
+                        </h4>
+
+                    </div>
+
+                    <div class="depoimento-card aparecer">
+
+                        <span>★★★★★</span>
+
+                        <p>
+                            “O cuidado nos detalhes realmente faz diferença.”
+                        </p>
+
+                        <h4>
+                            — André Costa
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="sobre" class="sobre aparecer">
             <div class="container">
                 <div class="sobre-texto">
                     <h2>
@@ -98,7 +162,7 @@
         </section>
 
 
-        <section class="servicos">
+        <section id="servicos" class="servicos">
 
             <div class="container">
 
@@ -108,7 +172,7 @@
 
                 <div class="servicos-cards">
 
-                    <div class="servico-card">
+                    <div class="servico-card aparecer">
 
                         <h4>✂️ Assinatura Orizon</h4>
 
@@ -118,7 +182,7 @@
 
                     </div>
 
-                    <div class="servico-card">
+                    <div class="servico-card aparecer">
 
                         <h4>🪒 Barba de Respeito</h4>
 
@@ -128,7 +192,7 @@
 
                     </div>
 
-                    <div class="servico-card">
+                    <div class="servico-card aparecer">
 
                         <h4>💈 Combo Prime</h4>
 
@@ -144,39 +208,72 @@
 
         </section>
 
-        <section class="depoimentos">
+        
 
-        </section>
-
-        <section class="galeria">
-            <h2>
-                Prova Social e Galeria
-            </h2>
-            <h4>
-                Título:
-            </h4> 
-            <p>
-                Transformações Reais
-            </p>
-            <div class="galeria-imagem">
-                <img src="imagens/download (2).jpg" alt="salao-apropriado">
+        <section class="galeria aparecer">
+            <div class="container">
+                <h2>
+                    Prova Social e Galeria
+                </h2>
+                <h4>
+                    Título:
+                </h4>
+                <p>
+                    Transformações Reais
+                </p>
+                <div class="galeria-imagem">
+                    <img src="imagens/download (2).jpg" alt="salao-apropriado">
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <h4>
-            Texto:
-        </h4> 
-        <p>
-            Localizado em joinville, pronto para te receber.
-        </p>
-        <p>
-            WhatsApp :
-        </p>
+    <footer id="contato">
 
-    </footer>
+            <div class="container">
+
+                <div class="footer-conteudo">
+
+                    <h2 class="logo">
+                        Orizon Prime Studio
+                    </h2>
+
+                    <p>
+                        Localizado em Joinville, pronto para elevar sua experiência.
+                    </p>
+
+                    <div class="footer-links">
+
+                        <a href="#">
+                            WhatsApp
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Agendamento
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-copy">
+
+                    <p>
+                        © 2026 Orizon Prime Studio — Todos os direitos reservados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <script src="js/script.js"></script>
     
 </body>
 </html>
