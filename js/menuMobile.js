@@ -5,6 +5,8 @@ export function menuMobile() {
     const nav = document.querySelector('nav')
 
     const linksMenu = document.querySelectorAll('nav a')
+
+    const overlay = document.querySelector('.overlay')
     
 
     if (!botaoMenu || !nav) return    
@@ -12,6 +14,12 @@ export function menuMobile() {
     botaoMenu.addEventListener('click', () => {
 
         nav.classList.toggle('ativo')
+
+        overlay.classList.toggle('ativo')
+
+        document.body.classList.toggle('menu-aberto')
+
+        botaoMenu.classList.toggle('ativo')
 
     })
 
@@ -21,7 +29,25 @@ export function menuMobile() {
 
             nav.classList.remove('ativo')
 
+            overlay.classList.remove('ativo')
+
+            document.body.classList.remove('menu-aberto')
+
+            botaoMenu.classList.remove('ativo')
+
         })
+
+    })
+
+    overlay.addEventListener('click', () => {
+
+        nav.classList.remove('ativo')
+
+        overlay.classList.remove('ativo')
+
+        document.body.classList.remove('menu-aberto')
+
+        botaoMenu.classList.remove('ativo')
 
     })
 

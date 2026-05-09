@@ -5,10 +5,22 @@
     }
 
     header .container {
-    flex-direction: row;
+        flex-direction: row;
 
-    justify-content: space-between;
-}
+        justify-content: space-between;
+    }
+
+    header {
+        position: fixed;
+
+        width: 100%;
+
+        top: 0;
+
+        left: 0;
+
+        z-index: 997;
+    }
 
     .hero .container {
         flex-direction: column;
@@ -37,48 +49,98 @@
         
     .menu-mobile {
         display: block;
-        
+
+        width: 40px;
+
+        height: 40px;
+
         background: none;
-        
+
         border: none;
-        
-        color: white;
-        
-        font-size: 30px;
-        
+
         cursor: pointer;
+
+        position: relative;
+
+        z-index: 1001;
     }
 
-    header {
-    position: relative;
-}
+    .menu-mobile span,
+    .menu-mobile span::before,
+    .menu-mobile span::after {
+        display: block;
 
-    nav {
+        width: 30px;
+
+        height: 3px;
+
+        background: white;
+
         position: absolute;
 
-        top: 100%;
+        left: 0.9px;
 
-        left: 0;
+        transition: 0.3s;
 
-        width: 100%;
+        content: '';
+    }
+
+    .menu-mobile span {
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+    .menu-mobile span::before {
+        top: -10px;
+    }
+
+    .menu-mobile span::after {
+        top: 10px;
+    }
+
+    .menu-mobile.ativo span {
+        background: transparent;
+    }
+
+    .menu-mobile.ativo span::before {
+        transform: rotate(45deg);
+
+        top: 0;
+    }
+
+    .menu-mobile.ativo span::after {
+        transform: rotate(-45deg);
+
+        top: 0;
+    }
+
+    nav {
+        position: fixed;
+
+        top: 0;
+
+        right: -100%;
+
+        width: 70%;
+
+        height: 100vh;
 
         background: #111;
 
+        display: flex;
+
         flex-direction: column;
+
+        justify-content: center;
 
         align-items: center;
 
-        gap: 20px;
-
-        padding: 30px 0;
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform: translateY(-20px);
+        gap: 30px;
 
         transition: 0.3s;
+
+        z-index: 999;
     }
     
     nav.ativo {
@@ -87,6 +149,8 @@
         visibility: visible;
 
         transform: translateY(0);
+
+        right: 0;
     }
 
     .card,
@@ -121,6 +185,28 @@
 
     section {
         padding: 80px 0;
+    }
+
+    .overlay {
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0,0,0,0.5);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: 0.3s;
+
+        z-index: 998;
+    }
+
+    .overlay.ativo {
+        opacity: 1;
+
+        visibility: visible;
     }
 
 }

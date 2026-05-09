@@ -38,6 +38,10 @@ body {
     color: var(--cor-texto);
 }
 
+body.menu-aberto {
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
