@@ -9,7 +9,19 @@ export function menuMobile() {
     const overlay = document.querySelector('.overlay')
     
 
-    if (!botaoMenu || !nav) return    
+    if (!botaoMenu || !nav) return 
+    
+    function fecharMenu() {
+
+        nav.classList.remove('ativo')
+
+        overlay.classList.remove('ativo')
+
+        document.body.classList.remove('menu-aberto')
+
+        botaoMenu.classList.remove('ativo')
+
+    }
 
     botaoMenu.addEventListener('click', () => {
 
@@ -21,35 +33,20 @@ export function menuMobile() {
 
         botaoMenu.classList.toggle('ativo')
 
+        const menuAberto = nav.classList.contains('ativo')
+
+        botaoMenu.setAttribute('aria-expanded', menuAberto)
+
     })
 
     linksMenu.forEach((link) => {
 
-        link.addEventListener('click', () => {
-
-            nav.classList.remove('ativo')
-
-            overlay.classList.remove('ativo')
-
-            document.body.classList.remove('menu-aberto')
-
-            botaoMenu.classList.remove('ativo')
-
-        })
+        link.addEventListener('click', fecharMenu)
 
     })
 
-    overlay.addEventListener('click', () => {
-
-        nav.classList.remove('ativo')
-
-        overlay.classList.remove('ativo')
-
-        document.body.classList.remove('menu-aberto')
-
-        botaoMenu.classList.remove('ativo')
-
-    })
+    overlay.addEventListener('click', fecharMenu)
 
 
 }
+

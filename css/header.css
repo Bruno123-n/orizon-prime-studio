@@ -22,15 +22,19 @@ header {
     z-index: 1000;
 
     width: 100%;
+
+    transition: 0.3s;
 }
 
 header.ativo {
-    background: rgba(17,17,17,0.95);
+    padding: 15px 0;
+
+    background: rgba(10,10,10,0.95);
 
     backdrop-filter: blur(10px);
 
-    padding: 18px 0;
-
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    
     border-bottom: 1px solid var(--cor-borda);
 }
 

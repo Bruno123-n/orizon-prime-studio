@@ -2,26 +2,26 @@ export function scrollReveal() {
 
     const elementos = document.querySelectorAll('.aparecer')
 
-    function mostrarElementos() {
+    const observer = new IntersectionObserver((entries) => {
 
-        const alturaTela = window.innerHeight
+        entries.forEach((entry) => {
 
-        elementos.forEach((elemento) => {
+            if(entry.isIntersecting) {
 
-            const distanciaTopo = elemento.getBoundingClientRect().top
-
-            if(distanciaTopo < alturaTela - 100) {
-
-                elemento.classList.add('ativo')
+                entry.target.classList.add('ativo')
 
             }
 
         })
 
-    }
+    }, {
+        threshold: 0.2
+    })
 
-    window.addEventListener('scroll', mostrarElementos)
+    elementos.forEach((elemento) => {
 
-    mostrarElementos()
+        observer.observe(elemento)
+
+    })
 
 }

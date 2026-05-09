@@ -1,6 +1,37 @@
 export function formulario() {
 
+
     const form = document.querySelector('.form-agendamento')
+
+    const inputNome = document.querySelector('#nome')
+
+    const inputTelefone = document.querySelector('#telefone')
+
+    const selectServico = document.querySelector('#servico')
+
+    function mostrarErro(input) {
+
+        input.classList.add('input-erro')
+
+    }
+
+        inputNome.addEventListener('input', () => {
+
+            inputNome.classList.remove('input-erro')
+
+        })
+
+        inputTelefone.addEventListener('input', () => {
+
+            inputTelefone.classList.remove('input-erro')
+
+        })
+
+        selectServico.addEventListener('change', () => {
+
+            selectServico.classList.remove('input-erro')
+
+        })
 
     form.addEventListener('submit', (event) => {
 
@@ -16,20 +47,31 @@ export function formulario() {
 
 
 
-        if(nome === '' || telefone === '') {
+        if(nome === '') {
 
-            alert('Preencha todos os campos')
+            mostrarErro(inputNome)
+        }
 
-            return
+        if(telefone === '') {
+
+            mostrarErro(inputTelefone)
+
         }
 
         if(servico === 'Escolha um serviço') {
 
-            alert('Escolha um serviço')
+            mostrarErro(selectServico)
+
+        }
+
+        if(
+            nome === '' ||
+            telefone === '' ||
+            servico === 'Escolha um serviço'
+        ) {
 
             return
         }
-
 
 
         const mensagem = `
