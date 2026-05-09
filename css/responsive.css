@@ -118,7 +118,7 @@
     nav {
         position: fixed;
 
-        top: 0;
+        top: 80px;
 
         right: -100%;
 
@@ -200,7 +200,7 @@
 
         transition: 0.3s;
 
-        z-index: 998;
+        z-index: 10;
     }
 
     .overlay.ativo {

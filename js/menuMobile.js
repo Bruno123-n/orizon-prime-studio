@@ -45,8 +45,8 @@ export function menuMobile() {
 
     })
 
+    
     overlay.addEventListener('click', fecharMenu)
-
 
 }
 

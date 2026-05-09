@@ -27,18 +27,18 @@
 
     width: 300px;
 
-    transition: 0.3s;
+    /* transition: 0.3s; */
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.card:hover {
+/* .card:hover {
     transform: translateY(-8px);
 
     border-color: var(--cor-principal);
 
     box-shadow: 0 10px 30px rgba(212,175,55,0.1);
-}
+} */
 
 .card h4 {
     color: var(--cor-principal);
@@ -62,6 +62,7 @@
     flex-wrap: wrap;
 
     margin-top: 50px;
+    
 }
 
 .depoimento-card {
@@ -77,14 +78,14 @@
 
     min-width: 250px;
 
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
-.depoimento-card:hover {
+/* .depoimento-card:hover {
     transform: translateY(-8px);
 
     border-color: var(--cor-principal);
-}
+} */
 
 .depoimento-card span {
     color: var(--cor-principal);
@@ -155,14 +156,14 @@
 
     min-width: 250px;
 
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
-.servico-card:hover {
+/* .servico-card:hover {
     transform: translateY(-8px);
 
     border-color: var(--cor-principal);
-}
+} */
 
 .servico-card h4 {
     color: var(--cor-principal);
@@ -181,4 +182,23 @@
 .card,
 .servico-card {
     overflow: hidden;
+}
+
+.card,
+.servico-card,
+.depoimento-card {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.card:hover,
+.servico-card:hover,
+.depoimento-card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    border-color: var(--cor-principal);
+
+    box-shadow: 0 10px 30px rgba(212,175,55,0.1);
 }
