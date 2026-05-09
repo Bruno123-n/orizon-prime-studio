@@ -5,10 +5,10 @@
     }
 
     header .container {
-        flex-direction: column;
+    flex-direction: row;
 
-        gap: 20px;
-    }
+    justify-content: space-between;
+}
 
     .hero .container {
         flex-direction: column;
@@ -93,6 +93,34 @@
     .servico-card,
     .depoimento-card {
         width: 100%;
+    }
+
+    .sobre .container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .galeria-imagem img {
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .galeria h2 {
+        margin-bottom: 15px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 80px 0;
     }
 
 }
