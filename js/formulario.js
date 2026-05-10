@@ -42,54 +42,65 @@ export function formulario() {
         const nome = document.querySelector('#nome').value
 
         const telefone = document.querySelector('#telefone').value
-
+        
         const servico = document.querySelector('#servico').value
-
-
-
+        
+        const loader = document.querySelector('.loader')
+        
+        
+        
         if(nome === '') {
-
+            
             mostrarErro(inputNome)
         }
-
+        
         if(telefone === '') {
-
+            
             mostrarErro(inputTelefone)
-
+            
         }
-
+        
         if(servico === 'Escolha um serviço') {
-
+            
             mostrarErro(selectServico)
-
+            
         }
-
+        
         if(
             nome === '' ||
             telefone === '' ||
             servico === 'Escolha um serviço'
         ) {
-
+            
             return
         }
-
-
+        
+        
         const mensagem = `
-            Olá, meu nome é ${nome}.
-
-            Gostaria de agendar o serviço:
-            ${servico}
-
-            Telefone: ${telefone}
+        Olá, meu nome é ${nome}.
+        
+        Gostaria de agendar o serviço:
+        ${servico}
+        
+        Telefone: ${telefone}
         `
-
+        
         const url = `https://wa.me/5547997688933?text=${encodeURIComponent(mensagem)}`
-
-        botao.textContent = 'Enviando...'
-
+        
+        botao.innerHTML = `
+        <span class="loader-btn"></span>
+        Enviando...
+        `
+        
         botao.disabled = true
 
+        loader.style.display = 'block'
+
         window.open(url, '_blank')
+
+        loader.style.display = 'none'
+
+        form.reset()
 
         botao.textContent = 'Agendar Agora'
         
@@ -109,6 +120,7 @@ export function formulario() {
 export function mascaraTelefone() {
 
     const inputTelefone = document.querySelector('#telefone')
+
 
     inputTelefone.addEventListener('input', () => {
 

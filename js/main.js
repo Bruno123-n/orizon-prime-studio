@@ -8,6 +8,10 @@ import { formulario } from './formulario.js'
 
 import { mascaraTelefone } from './formulario.js'
 
+import { scrollProgress } from './scrollProgress.js'
+
+import { backToTop } from './backToTop.js'
+
 
 
 formulario()
@@ -18,4 +22,8 @@ menuMobile()
 
 scrollReveal()
 
+scrollProgress()
+
 headerScroll()
+
+backToTop()

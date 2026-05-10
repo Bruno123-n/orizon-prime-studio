@@ -68,9 +68,15 @@ main {
     padding: 0 60px;
 }
 
-
-
 .btn-primary {
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+    
+    gap: 10px;
+
     background: var(--cor-principal);
 
     color: var(--cor-fundo);
@@ -198,6 +204,121 @@ main {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+.loader {
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+
+    height: 50px;
+
+    border: 5px solid #333;
+
+    border-top: 5px solid #d4af37;
+
+    border-radius: 50%;
+
+    animation: loading 1s linear infinite;
+
+    z-index: 2000;
+
+    display: none;
+}
+
+@keyframes loading {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.loader-btn {
+    width: 18px;
+
+    height: 18px;
+
+    border: 2px solid rgba(0,0,0,0.3);
+
+    border-top: 2px solid black;
+
+    border-radius: 50%;
+
+    animation: loading 0.8s linear infinite;
+
+    display: inline-block;
+    
+}
+
+.scroll-progress {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 4px;
+
+    background: var(--cor-principal);
+
+    z-index: 2000;
+
+    transition: width 0.1s;
+}
+
+.back-to-top {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 100px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--cor-principal);
+
+    color: black;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+.back-to-top.ativo {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
 }
 
 
