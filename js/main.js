@@ -12,7 +12,14 @@ import { scrollProgress } from './scrollProgress.js'
 
 import { backToTop } from './backToTop.js'
 
+import { lazyImages } from './lazyImages.js'
 
+import { modalImagem } from './modalImagem.js'
+
+
+
+
+modalImagem()
 
 formulario()
 
@@ -27,3 +34,5 @@ scrollProgress()
 headerScroll()
 
 backToTop()
+
+lazyImages()
